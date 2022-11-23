@@ -1,7 +1,6 @@
 const { types } = require("../tools/types");
-const { mainKey, foodKey, infoKey } = require("../tools/keyboard");
-const fs = require("fs");
-const path = require("path");
+const { mainKey } = require("../tools/options");
+
 function msgEvents(bot) {
   bot.on("message", (msg) => {
     if (types(msg).text == "/start") {

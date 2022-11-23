@@ -1,11 +1,15 @@
 {
-  "name": "new",
+  "name": "nodejs-tg-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "watch": "nodemon index.js",
-    "dev": "node index.js",
+    "dev": "nodemon src/server.js",
+    "cl:start": "pm2 start src/server.js --name nodejs-tg-bot",
+    "cl:reload": "pm2 reload src/server.js --name nodejs-tg-bot",
+    "cl:status": "pm2 status",
+    "cl:stop": "pm2 stop src/server.js",
+    "cl:max": "pm2 start src/server.js -i max",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +20,7 @@
     "node-telegram-bot-api": "^0.58.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "pm2": "^5.2.2"
   }
 }
